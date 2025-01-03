@@ -10,6 +10,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                //"-static", //for a completely statically built exe (larger)
                 "-DSFML_STATIC",
                 "-Isfml_headers",
                 "-Lsfml_libs",

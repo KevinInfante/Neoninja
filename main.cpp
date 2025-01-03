@@ -13,8 +13,10 @@
 // added "sfml_headers" folder where I copied include/SFML, and "sfml_libs" folder
 // where I copied the 5 static libraries: libreetype.a,libopenal32.a,libsfml-graphics-s.a,
 // libsfml-system-s.a,libsfml-window-s.a
-//g++ -DSFML_STATIC -Isfml_headers main.cpp -Lsfml_libs -lsfml-graphics-s -lfreetype -lsfml-window-s -lopengl32 -lgdi32 -lsfml-system-s -lwinmm -o main
+//g++ -static -DSFML_STATIC -Isfml_headers main.cpp -Lsfml_libs -lsfml-graphics-s -lfreetype -lsfml-window-s -lopengl32 -lgdi32 -lsfml-system-s -lwinmm
+// -o main
 // above compile line works, and this way results in 0 errors/warnings in vs code
+// note, include the "-static" option above, this will generate a .exe that isn't dependent on any dlls, only the assets folder
 
 // way 3:
 // If using VS Code, use the run/debug options, along with the launch.json and tasks.json included
